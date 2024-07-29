@@ -4,7 +4,7 @@ resource "aws_iot_thing" "esp32" {
 
 resource "aws_iot_thing_principal_attachment" "iot_attachment" {
   principal = aws_iot_certificate.cert.arn
-  thing = aws_iot_thing.esp32.name
+  thing     = aws_iot_thing.esp32.name
 }
 
 data "aws_iam_policy_document" "pubsub" {
